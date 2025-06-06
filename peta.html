@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Peta Interaktif - WEBGIS Titik Rawan Kecelakaan</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="asset/Kabupaten Bandung.png" alt="Logo Kabupaten Bandung" class="logo">
+            <h1>WEBGIS Titik Rawan Kecelakaan di Kabupaten Bandung</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="peta.html" class="active">Peta</a>
+        <a href="data.html">Data</a>
+        <a href="ketiga.html">Pengembang</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <section class="page-header">
+        <h2>Peta Interaktif Titik Rawan Kecelakaan</h2>
+    </section>
+
+    <section class="map-container" id="map-section">
+        <div class="controls">
+            <label>Filter Penyebab:
+                <select id="filterPenyebab">
+                    <option value="semua">Memuat...</option>
+                </select>
+            </label>
+            <label>Bobot Penyebab:
+                <select id="filterBobot">
+                    <option value="semua">Semua</option>
+                    <option value=">3">Lebih dari 3</option>
+                    <option value="<=5">5 atau kurang</option>
+                </select>
+            </label>
+        </div>
+        <div id="mapid"></div>
+        <div id="legend-container" class="legend hidden">
+            <div id="legend-content">
+                </div>
+        </div>
+    </section>
+
+    <div class="back-to-home">
+        <a href="index.html">Kembali ke Beranda</a>
+    </div>
+
+     <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Kontak Resmi</h4>
+        <p>Geo-Trace Kabupaten Bandung</p>
+        <p>Email: geotrace@gmail.com</p>
+        <p>Telp: 086795236877</p>
+      </div>
+      <div class="footer-section">
+        <h4>GEO-TRACE</h4>
+        <p>Geographic Traffic Accident Comprehensive Evaluation</p>
+        <p>Titik Rawan Kecelakaan</p>
+        <p>Kabupaten Bandung</p>
+      </div>
+      <div class="footer-section">
+        <h4>Tahun 2025</h4>
+        <p>© Pengembang GEO-TRACE</p>
+        <p>Semua hak cipta dilindungi</p>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    <script src="https://unpkg.com/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WEBGIS Titik Rawan Kecelakaan - Kabupaten Bandung</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.css" />
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="asset/Kabupaten Bandung.png" alt="Logo Kabupaten Bandung" class="logo">
+            <h1>WEBGIS Titik Rawan Kecelakaan di Kabupaten Bandung</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="peta.html">Peta</a>
+        <a href="data.html">Data</a>
+        <a href="ketiga.html">Pengembang</a> 
+        <a href="#contact">Kontak</a> 
+    </nav>
+
+    <section class="hero" id="home" style="background-image: linear-gradient(135deg, rgba(144, 238, 144, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%), url('asset/ikon_menara_sabilulungan.jpg');">
+        <div class="hero-content">
+            <h2>GEO-TRACE</h2>
+            <p>Visualisasi lokasi berisiko kecelakaan lalu lintas di wilayah Kabupaten Bandung</p>
+        </div>
+    </section>
+
+    <section class="description-section">
+        <div class="description-content">
+            <div class="accident-animation">
+                <img src="asset/animasi_lampu lalu lintas.png" alt="Animasi Kecelakaan" class="mascot-image">
+            </div>
+            <div class="description-card">
+                <h3>Tentang GEO-TRACE</h3>
+                <div class="description-text">
+                    <p>
+                        Kabupaten Bandung merupakan wilayah dengan mobilitas kendaraan yang tinggi dan kondisi geografis yang bervariasi, dari dataran hingga kawasan perbukitan. 
+                        Kombinasi antara kepadatan lalu lintas, pertumbuhan kendaraan, dan kondisi infrastruktur menjadikan sejumlah lokasi di wilayah ini sebagai titik rawan kecelakaan.
+                    </p>
+                    <p>
+                        <strong>GEO-TRACE</strong> (Geographic Traffic Accident Comprehensive Evaluation) 
+                        hadir sebagai sistem informasi geografis berbasis web yang dirancang untuk memetakan, menganalisis, dan memvisualisasikan titik-titik rawan kecelakaan di Kabupaten Bandung. 
+                        Sistem ini memberikan informasi spasial dan statistik yang akurat guna mendukung upaya peningkatan keselamatan lalu lintas yang mudah diakses dan dipahami oleh khalayak umum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-gallery">
+        <h3>Jelajahi Informasi</h3>
+        <div class="gallery-cards">
+            <a href="kondisi_geografis.html" class="gallery-card">
+                <img src="asset/kondisi_geografis.png" alt="Kondisi Geografis">
+                <div class="card-content">
+                    <h4>Kondisi Geografis</h4>
+                    <p>Informasi tentang kondisi geografis Kabupaten Bandung terhadap potensi kerawanan kecelakaan.</p>
+                </div>
+            </a> <a href="risiko_lalu_lintas.html" class="gallery-card">
+                <img src="asset/animasi_kecelakaan.png" alt="Risiko Lalu Lintas">
+                <div class="card-content">
+                    <h4>Risiko Lalu Lintas</h4>
+                    <p>Analisis faktor-faktor risiko kecelakaan dan pola distribusi kejadian di berbagai lokasi.</p>
+                </div>
+            </a>
+
+            <a href="mitigasi_kecelakaan.html" class="gallery-card">
+                <img src="asset/traffic.jpg" alt="Mitigasi Kecelakaan">
+                <div class="card-content">
+                    <h4>Mitigasi Kecelakaan</h4>
+                    <p>Strategi pencegahan dan upaya mitigasi untuk mengurangi risiko kecelakaan lalu lintas.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+   <section class="developer-section" id="developer">
+        <div class="developer-content">
+            <h3>Pengembang</h3>
+            <div class="developer-info">
+                <div class="developer-card">
+                    <img src="asset/foto_rompi_riskiya.jpg" alt="Developer" class="developer-photo">
+                    <h4>Pengembang GEO-TRACE</h4>
+                    <p><strong>Nama:</strong> Riskiya Wigunati</p>
+                    <p><strong>Deskripsi:</strong> Mahasiswa Sains Informasi Geografi, Universitas Pendidikan Indonesia,
+                       yang sedang mengembangkan website berbasis sistem informasi geografis untuk memetakan titik rawan kecelakaan di Kabupaten Bandung.</p>
+                    <p><strong>Email:</strong> riskiyawigunati14@upi.edu</p>
+                    <p><strong>Tahun Pengembangan:</strong> 2025</p>
+                </div>
+                <div class="methodology">
+                    <h4>Metodologi Pengembangan</h4>
+                    <ul>
+                        <li><strong>Pengumpulan Data:</strong> Dinas Perhubungan Kabupaten Bandung (2022), 
+                          Bappeda Kabupaten Bandung, (2021), 
+                          Portal Satu Data Kabupaten Bandung (2022), 
+                          Jasa Raharja Kabupaten Bandung (2024)</li>
+                        <li><strong>Analisis Spasial:</strong> Menggunakan teknologi GIS untuk identifikasi pola kecelakaan</li>
+                        <li><strong>Visualisasi:</strong> Platform WebGIS interaktif</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <h5>Teknologi yang Digunakan:</h5>
+                        <p>HTML, CSS, JavaScript, Leaflet.js, OpenStreetMap, GeoJSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <h4>Disclaimer</h4>
+                <p>Data yang digunakan gabungan dari berbagai sumber, sehingga dilakukan pembobotan untuk menentukan klasifikasi tingkat bahaya kecelakaan.
+                    Diperlukan analisis lebih lanjut untuk mendapatkan informasi yang lebih akurat dan terkini.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Kontak Resmi</h4>
+                <p>Geo-Trace Kabupaten Bandung</p>
+                <p>Email: geotrace@gmail.com</p>
+                <p>Telp: 086795236877</p>
+            </div>
+            <div class="footer-section">
+                <h4>GEO-TRACE</h4>
+                <p>Geographic Traffic Accident Comprehensive Evaluation</p>
+                <p>Titik Rawan Kecelakaan</p>
+                <p>Kabupaten Bandung</p>
+            </div>
+            <div class="footer-section">
+                <h4>Tahun 2025</h4>
+                <p>© Pengembang GEO-TRACE</p>
+                <p>Semua hak cipta dilindungi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

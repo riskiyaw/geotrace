@@ -1,0 +1,1491 @@
+/* ==================================== */
+/* Universal Styles & Reset */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    font-family: "Segoe UI", 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Added more robust font stack */
+    background: #f5f7fa; /* Light grey background */
+    color: #333; /* Dark grey text color for general content */
+    line-height: 1.6; /* Improved readability */
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+/* ==================================== */
+/* Header Section */
+/* ==================================== */
+header {
+    background: linear-gradient(135deg, #005f73 0%, #0a9396 100%); /* Gradient background */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* Center header content horizontally */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* For z-index if needed */
+    z-index: 10; /* Ensure header is above other elements */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px; /* Max width for content consistency */
+    width: 100%;
+}
+
+header .logo {
+    height: 55px; /* Sedikit perkecil */
+    width: 55px; /* Sedikit perkecil */
+    margin-right: 15px; /* Sesuaikan margin */
+    object-fit: contain; /* Ensures image scales down without cropping */
+}
+
+header h1 {
+    font-size: 1.5rem; /* Sedikit perkecil dari 1.6rem */
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3; /* Better line spacing for larger text */
+}
+
+/* ==================================== */
+/* Navigation Bar */
+/* ==================================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #005f73 0%, #0a9396 100%); /* Gradient background */
+    padding: 10px 20px; /* Added horizontal padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px; /* Space between nav items */
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 9; /* Below header, above content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 7px 14px; /* Sedikit perkecil padding */
+    border-radius: 5px; /* Slightly more rounded corners */
+    white-space: nowrap; /* Prevent text wrapping inside nav items */
+    font-size: 0.95rem; /* Sedikit perkecil */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.25); /* More visible hover state */
+    color: #e9ecef;
+}
+
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.35); /* More prominent active state */
+    color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for active state */
+}
+
+/* ==================================== */
+/* Hero Section (Homepage) */
+/* ==================================== */
+.hero {
+    height: 80vh; /* Set height to be 80% of viewport height */
+    min-height: 500px; /* Minimum height to ensure visibility on very small screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden; /* Ensure background doesn't bleed out */
+
+    /* Background properties for single image */
+    background-image: linear-gradient(135deg, rgba(144, 238, 144, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%), url('asset/ikon_menara_sabilulungan.jpg');
+    background-size: cover; /* Makes the image cover the entire element, maintaining aspect ratio */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    padding: 50px 20px; /* Sedikit perkecil padding */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 3rem; /* Sedikit perkecil dari 3.5rem */
+    margin-bottom: 12px; /* Sesuaikan margin */
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 1.5px; /* Sedikit perkecil spacing */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Sedikit perkecil dari 1.3rem */
+    max-width: 700px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+
+/* ==================================== */
+/* Description Section (About GEO-TRACE - Homepage & Geografi Page) */
+/* ==================================== */
+.description-section {
+    padding: 70px 20px; /* Sedikit perkecil padding */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+    /* Default untuk Homepage */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Sedikit perkecil gap */
+}
+
+.description-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23005f73' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Default untuk homepage description-content */
+.description-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: flex; /* Default: untuk menyusun animasi dan kartu utama berdampingan */
+}
+
+/* Aturan untuk .accident-animation (khusus homepage) */
+.accident-animation {
+    flex-shrink: 0;
+    width: 280px; /* Sedikit perkecil */
+    height: 280px; /* Sedikit perkecil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.mascot-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px); /* Sedikit perkecil efek bounce */
+    }
+}
+
+/* Default untuk description-card (homepage dan halaman lainnya) */
+.description-card {
+    background: white;
+    border-radius: 15px;
+    padding: 35px; /* Sedikit perkecil padding */
+    box-shadow: 0 8px 25px rgba(0, 95, 115, 0.12); /* Sedikit perkecil shadow */
+    border: 1px solid rgba(10, 147, 150, 0.12); /* Sedikit perkecil border */
+    position: relative;
+    overflow: hidden;
+    /* Default flex untuk homepage jika ada animasi di sampingnya */
+    flex: 1 1 65%; /* Mengambil 65% dari ruang yang tersedia di homepage */
+    max-width: 70%; /* Maksimal 70% lebar container di homepage */
+}
+
+.description-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #005f73 0%, #0a9396 100%);
+}
+
+.description-card h3 {
+    font-size: 2rem; /* Sedikit perkecil dari 2.2rem */
+    color: #005f73;
+    margin-bottom: 25px; /* Sedikit perkecil margin */
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px; /* Sedikit perkecil padding */
+}
+
+.description-card h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px; /* Sedikit perkecil width */
+    height: 3px; /* Sedikit perkecil height */
+    background: #0a9396;
+    border-radius: 2px;
+}
+
+.description-text {
+    background: rgba(248, 249, 250, 0.7);
+    padding: 20px; /* Sedikit perkecil padding */
+    border-radius: 10px;
+    border-left: 5px solid #0a9396;
+}
+
+.description-text p {
+    font-size: 1rem; /* Sedikit perkecil dari 1.1rem */
+    line-height: 1.7; /* Sesuaikan line height */
+    color: #444;
+    margin-bottom: 15px; /* Sedikit perkecil margin */
+    text-align: justify;
+}
+
+.description-text p:last-child {
+    margin-bottom: 0;
+}
+
+.description-text strong {
+    color: #005f73;
+    font-weight: 600;
+}
+
+/* SPESIFIK UNTUK JUDUL H4 DI HALAMAN GEOGRAFIS */
+.description-text h4 {
+    font-size: 1.1rem; /* Ukuran font untuk h4 di dalam description-text */
+    color: #005f73;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.description-text p.summary-conclusion {
+    font-size: 0.95rem; /* Ukuran font untuk kesimpulan */
+    font-style: italic;
+    color: #666;
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+/* ==================================== */
+/* SPESIFIK UNTUK HALAMAN GEOGRAFIS */
+/* ==================================== */
+.geography-page .description-section {
+    flex-direction: column; /* Mengatur .description-section di halaman geografis agar menumpuk */
+    align-items: center; /* Pusatkan seluruh section */
+}
+
+.geography-page .description-content {
+    flex-direction: column; /* Ini yang membuat setiap item menjadi baris vertikal */
+    align-items: center; /* Pusatkan kartu secara horizontal */
+    gap: 25px; /* Jarak antar kartu */
+    max-width: 950px; /* Konten geografis bisa sedikit lebih lebar dari homepage */
+    width: 100%;
+}
+
+.geography-page .description-card {
+    width: 80%; /* Kartu mengambil 80% dari lebar container-nya */
+    max-width: 1200px; /* Batasi lebar maksimal agar tidak terlalu melebar pada layar sangat besar */
+    flex: 0 0 auto; /* Ini penting: jangan biarkan flex item tumbuh atau menyusut secara otomatis */
+    padding: 35px; /* Sesuaikan padding jika perlu */
+}
+
+/* Pastikan tidak ada accident-animation di halaman geografis jika ada di DOM */
+.geography-page .accident-animation {
+    display: none;
+}
+
+/* ==================================== */
+/* Page Header (Used for Peta, Data, Pengembang pages) */
+/* ==================================== */
+.page-header {
+    background-color: #0a9396;
+    color: white;
+    padding: 25px 20px; /* Sedikit perkecil padding */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h2 {
+    font-size: 2rem; /* Sedikit perkecil dari 2.2rem */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ==================================== */
+/* Gallery Section (Jelajahi Informasi - Homepage) */
+/* ==================================== */
+.section-gallery {
+    padding: 50px 20px; /* Sedikit perkecil padding */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.section-gallery h3 {
+    font-size: 1.8rem; /* Sedikit perkecil dari 2rem */
+    color: #005f73;
+    margin-bottom: 35px; /* Sedikit perkecil margin */
+    font-weight: bold;
+}
+
+.gallery-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Sedikit perkecil gap */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-card {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+    width: 300px; /* Sedikit perkecil width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex; /* Make card content stretch */
+    flex-direction: column;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px); /* Sedikit perkecil lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sedikit perkecil shadow on hover */
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 160px; /* Sedikit perkecil height */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth image zoom */
+}
+
+.gallery-card:hover img {
+    transform: scale(1.03); /* Slight zoom on image */
+}
+
+.gallery-card .card-content { /* Specific to card content inside gallery-card */
+    padding: 18px; /* Sedikit perkecil padding */
+    flex-grow: 1; /* Allows content to fill remaining space */
+}
+
+.gallery-card .card-content h4 {
+    font-size: 1.3rem; /* Sedikit perkecil dari 1.4rem */
+    margin-bottom: 8px; /* Sedikit perkecil margin */
+    color: #0a9396;
+    font-weight: 600;
+}
+
+.gallery-card .card-content p {
+    font-size: 0.95rem; /* Sedikit perkecil dari 1rem */
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ==================================== */
+/* Developer Section (Pengembang Page / Section on Index) */
+/* ==================================== */
+.developer-section {
+    padding: 50px 20px; /* Sedikit perkecil padding */
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    text-align: center;
+}
+
+.developer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.developer-section h3 {
+    font-size: 2rem; /* Sedikit perkecil dari 2.2rem */
+    color: #005f73;
+    margin-bottom: 35px; /* Sedikit perkecil margin */
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.developer-section h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px; /* Sedikit perkecil width */
+    height: 3px; /* Sedikit perkecil height */
+    background: #0a9396;
+    border-radius: 2px;
+}
+
+.developer-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Sedikit perkecil gap */
+    margin-bottom: 35px; /* Sedikit perkecil margin */
+    justify-content: center;
+    align-items: stretch; /* Ensures cards have equal height */
+}
+
+.developer-card {
+    flex: 1;
+    min-width: 260px; /* Sedikit perkecil */
+    max-width: 360px; /* Sedikit perkecil */
+    background-color: white;
+    padding: 25px; /* Sedikit perkecil padding */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 95, 115, 0.12); /* Sedikit perkecil shadow */
+    border: 1px solid rgba(10, 147, 150, 0.12); /* Sedikit perkecil border */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.developer-photo {
+    width: 100px; /* Sedikit perkecil */
+    height: 100px; /* Sedikit perkecil */
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px; /* Sedikit perkecil margin */
+    display: block;
+    border: 3px solid #0a9396; /* Sedikit perkecil border */
+    box-shadow: 0 3px 10px rgba(10, 147, 150, 0.2); /* Sedikit perkecil shadow */
+}
+
+.developer-card h4 {
+    color: #0a9396;
+    margin-bottom: 12px; /* Sedikit perkecil margin */
+    font-size: 1.3rem; /* Sedikit perkecil dari 1.4rem */
+    font-weight: bold;
+}
+
+.developer-card p {
+    margin-bottom: 8px; /* Sedikit perkecil margin */
+    line-height: 1.5;
+    text-align: left;
+    flex-grow: 1;
+    font-size: 0.9rem; /* Sedikit perkecil */
+}
+
+.methodology {
+    flex: 1;
+    min-width: 260px; /* Sedikit perkecil */
+    max-width: 480px; /* Sedikit perkecil */
+    background-color: white;
+    padding: 25px; /* Sedikit perkecil padding */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 95, 115, 0.12); /* Sedikit perkecil shadow */
+    border: 1px solid rgba(10, 147, 150, 0.12); /* Sedikit perkecil border */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.methodology h4 {
+    color: #0a9396;
+    margin-bottom: 15px; /* Sedikit perkecil margin */
+    font-size: 1.3rem; /* Sedikit perkecil dari 1.4rem */
+    font-weight: bold;
+    text-align: center;
+}
+
+.methodology ul {
+    margin-left: 20px; /* Sedikit perkecil margin */
+    margin-bottom: 15px; /* Sedikit perkecil margin */
+    list-style-type: disc;
+    padding-left: 0;
+}
+
+.methodology li {
+    margin-bottom: 8px; /* Sedikit perkecil margin */
+    line-height: 1.5;
+    color: #555;
+    font-size: 0.9rem; /* Sedikit perkecil */
+}
+
+.tech-stack {
+    background: rgba(248, 249, 250, 0.9);
+    padding: 12px; /* Sedikit perkecil padding */
+    border-radius: 8px;
+    border-left: 4px solid #0a9396; /* Sedikit perkecil border */
+    margin-top: 15px; /* Sedikit perkecil margin */
+}
+
+.tech-stack h5 {
+    color: #005f73;
+    margin-bottom: 6px; /* Sedikit perkecil margin */
+    font-size: 1rem; /* Sedikit perkecil dari 1.05rem */
+}
+
+.tech-stack p {
+    font-size: 0.9rem; /* Sedikit perkecil dari 0.95rem */
+    color: #666;
+    margin: 0;
+}
+
+.disclaimer {
+    background: white;
+    padding: 20px; /* Sedikit perkecil padding */
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08); /* Sedikit perkecil shadow */
+    border-left: 4px solid #dc3545; /* Sedikit perkecil border */
+    text-align: left;
+    margin-top: 25px; /* Sedikit perkecil margin */
+}
+
+.disclaimer h4 {
+    color: #dc3545;
+    margin-bottom: 12px; /* Sedikit perkecil margin */
+    font-size: 1.15rem; /* Sedikit perkecil dari 1.25rem */
+    font-weight: 600;
+}
+
+.disclaimer p {
+    font-size: 0.9rem; /* Sedikit perkecil dari 0.95rem */
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* ==================================== */
+/* Map Page Specific Styles */
+/* ==================================== */
+.map-container {
+    padding: 25px; /* Sedikit perkecil padding */
+    position: relative;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.map-container h3 {
+    text-align: center;
+    margin-bottom: 18px; /* Sedikit perkecil margin */
+    color: #005f73;
+    font-size: 1.7rem; /* Sedikit perkecil dari 1.8rem */
+    font-weight: bold;
+}
+
+#mapid {
+    height: 550px; /* Sedikit perkecil height */
+    width: 100%;
+    border: 2px solid #0a9396;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.controls {
+    margin: 18px 0; /* Sedikit perkecil margin */
+    display: flex;
+    gap: 20px; /* Sedikit perkecil gap */
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f8f9fa;
+    padding: 12px 18px; /* Sedikit perkecil padding */
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.controls label {
+    font-size: 0.95rem; /* Sedikit perkecil dari 1rem */
+    font-weight: 500;
+    color: #005f73;
+    display: flex;
+    align-items: center;
+}
+
+.controls select {
+    margin-left: 6px; /* Sedikit perkecil margin */
+    padding: 7px 10px; /* Sedikit perkecil padding */
+    border: 1px solid #0a9396;
+    border-radius: 5px;
+    background: white;
+    min-width: 150px; /* Sedikit perkecil min-width */
+    cursor: pointer;
+    font-size: 0.9rem; /* Sedikit perkecil dari 0.95rem */
+    color: #444;
+    appearance: none; /* Remove default select arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 20 20%22 fill%3D%22%230a9396%22%3E%3Cpath d%3D%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22%2F%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px center; /* Sesuaikan posisi arrow */
+    background-size: 0.9em; /* Sedikit perkecil size */
+    padding-right: 25px; /* Sedikit perkecil padding */
+}
+
+.map-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Custom Legenda Control Button (Added !important for stronger override) */
+.legend-control {
+    margin-left: 5px !important;
+}
+
+.legend-control a {
+    background: #0a9396 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 0 8px; /* Sedikit perkecil padding */
+    line-height: 24px; /* Sedikit perkecil line-height */
+    font-size: 13px; /* Sedikit perkecil dari 14px */
+    text-decoration: none;
+    border-radius: 4px;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); /* Sedikit perkecil shadow */
+    text-align: center;
+}
+
+.legend-control a:hover {
+    background: #005f73 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); /* Sedikit perkecil shadow */
+}
+
+.legend-control a.active {
+    background: #005f73 !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25); /* Sedikit perkecil shadow */
+    transform: translateY(0);
+}
+
+/* Popup legenda dengan animasi */
+#legend-container {
+    position: absolute;
+    top: 40px; /* Sedikit perkecil top */
+    right: 8px; /* Sedikit perkecil right */
+    background: white;
+    padding: 12px; /* Sedikit perkecil padding */
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); /* Sedikit perkecil shadow */
+    font-size: 0.85rem; /* Sedikit perkecil dari 0.9rem */
+    border: 1px solid #0a9396; /* Sedikit perkecil border */
+    z-index: 1000;
+    min-width: 260px; /* Sedikit perkecil */
+    max-width: 300px; /* Sedikit perkecil */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#legend-container.hidden {
+    opacity: 0;
+    transform: translateY(-8px); /* Sedikit perkecil translateY */
+    pointer-events: none;
+    display: block;
+}
+
+#legend-container strong {
+    color: #005f73;
+    display: block;
+    margin-bottom: 6px; /* Sedikit perkecil margin */
+    font-size: 1.05rem; /* Sedikit perkecil dari 1.1rem */
+    font-weight: bold;
+}
+
+/* Efek hover untuk legenda */
+#legend-container:hover {
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35); /* Sedikit perkecil shadow */
+}
+
+/* Specific styling for legend items to match JS rendering */
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px; /* Sedikit perkecil margin */
+    font-size: 0.9em; /* Sedikit perkecil dari 0.95em */
+    color: #555;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-item i {
+    width: 25px; /* Sedikit perkecil */
+    height: 2px; /* Sedikit perkecil */
+    margin-right: 8px; /* Sedikit perkecil margin */
+    opacity: 0.8;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Specific style for point markers in legend */
+.legend-item i[style*="border-radius: 50%"] {
+    width: 10px; /* Sedikit perkecil */
+    height: 10px; /* Sedikit perkecil */
+    border: none;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2); /* Sedikit perkecil shadow */
+}
+
+/* Headings within the legend content */
+#legend-content h4 {
+    color: #005f73;
+    margin-top: 12px; /* Sedikit perkecil margin */
+    margin-bottom: 8px; /* Sedikit perkecil margin */
+    font-size: 0.95rem; /* Sedikit perkecil dari 1rem */
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px; /* Sedikit perkecil padding */
+}
+
+#legend-content h4:first-of-type {
+    margin-top: 0;
+}
+
+/* Custom Leaflet Control Styles */
+.leaflet-control-home {
+    background: #0a9396;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Sedikit perkecil shadow */
+    width: 28px; /* Sedikit perkecil */
+    height: 28px; /* Sedikit perkecil */
+    line-height: 28px; /* Sedikit perkecil */
+    text-align: center;
+    overflow: hidden;
+}
+
+.leaflet-control-home a {
+    background: #0a9396;
+    color: white;
+    font-size: 15px; /* Sedikit perkecil */
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.leaflet-control-home a:hover {
+    background: #005f73;
+}
+
+.leaflet-control-fullscreen a,
+.leaflet-control-locate a {
+    background: #0a9396 !important;
+    color: white !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important; /* Sedikit perkecil shadow */
+    transition: background 0.3s ease !important;
+}
+
+.leaflet-control-fullscreen a:hover,
+.leaflet-control-locate a:hover {
+    background: #005f73 !important;
+}
+
+/* ==================================== */
+/* Data Section (Data Page) */
+/* ==================================== */
+.data-section {
+    padding: 35px; /* Sedikit perkecil padding */
+    background-color: #e9ecef;
+    margin: 25px auto; /* Sedikit perkecil margin */
+    max-width: 1100px; /* Sedikit perkecil max-width */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Sedikit perkecil shadow */
+}
+
+.data-section h3 {
+    color: #005f73;
+    margin-bottom: 18px; /* Sedikit perkecil margin */
+    font-size: 1.7rem; /* Sedikit perkecil dari 1.8rem */
+    font-weight: bold;
+    text-align: center;
+}
+
+.data-statistics {
+    margin-top: 25px; /* Sedikit perkecil margin */
+}
+
+.data-statistics h4 {
+    color: #0a9396;
+    margin-bottom: 12px; /* Sedikit perkecil margin */
+    font-size: 1.2rem; /* Sedikit perkecil dari 1.3rem */
+    font-weight: 600;
+}
+
+.data-table {
+    width: 100%; /* Tabel akan mengisi 100% dari parent */
+    border-collapse: collapse;
+    margin-top: 12px; /* Sedikit perkecil margin */
+    background-color: white;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08); /* Sedikit perkecil shadow */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 12px; /* Sedikit perkecil padding */
+    border-bottom: 1px solid #eee;
+    font-size: 0.88em; /* Sedikit perkecil dari 0.9em */
+    vertical-align: top;
+}
+
+.data-table th {
+    background-color: #0a9396;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em; /* Sedikit perkecil dari 0.85em */
+    white-space: nowrap; /* Teks header tetap satu baris, jika memungkinkan */
+    text-align: center; /* Penjajaran tengah untuk semua header kolom */
+}
+
+/* Penyesuaian lebar kolom agar mirip gambar */
+/* Pastikan total width mendekati 100% */
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) { /* Kolom Kecamatan */
+    width: 15%; 
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) { /* Kolom Nama Jalan */
+    width: 25%; 
+}
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) { /* Kolom Penyebab Utama */
+    width: 35%; 
+}
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) { /* Kolom Bobot Penyebab Utama */
+    width: 10%; 
+    text-align: center; /* Angka bobot di tengah */
+}
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) { /* Kolom Tingkat Bahaya */
+    width: 15%; 
+    /* text-align: left; <-- Biarkan default left atau sesuaikan */
+    white-space: nowrap; /* Untuk memastikan 'Sangat Tinggi' tidak memecah baris terlalu dini */
+}
+
+
+.data-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.data-table tr:hover {
+    background-color: #e0f2f7;
+}
+
+/* ==================================== */
+/* Back to Home Button (Generic utility) */
+/* ==================================== */
+.back-to-home {
+    text-align: center;
+    margin: 30px 0; /* Sedikit perkecil margin */
+}
+
+.back-to-home a {
+    display: inline-block;
+    background-color: #0a9396;
+    color: white;
+    padding: 10px 20px; /* Sedikit perkecil padding */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem; /* Sedikit perkecil */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sedikit perkecil shadow */
+}
+
+.back-to-home a:hover {
+    background-color: #005f73;
+    transform: translateY(-1px); /* Sedikit perkecil lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Sedikit perkecil shadow */
+}
+
+/* ==================================== */
+/* Footer */
+/* ==================================== */
+footer {
+    background: linear-gradient(135deg, #005f73 0%, #0a9396 100%);
+    color: white;
+    padding: 18px 15px; /* Sedikit perkecil padding */
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px; /* Sedikit perkecil gap */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px; /* Sedikit perkecil min-width */
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-size: 1rem; /* Sedikit perkecil dari 1.1rem */
+    margin-bottom: 8px; /* Sedikit perkecil margin */
+    color: #e9ecef;
+    font-weight: bold;
+}
+
+.footer-section p {
+    margin-bottom: 4px; /* Sedikit perkecil margin */
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem; /* Sedikit perkecil dari 0.85rem */
+}
+
+/* ==================================== */
+/* Responsive Design */
+/* ==================================== */
+
+/* Tablet and larger phones */
+@media (max-width: 992px) {
+    header .logo {
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+    }
+    header h1 {
+        font-size: 1.4rem; /* Sedikit perkecil lagi */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Sedikit perkecil lagi */
+        padding: 6px 12px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem; /* Sedikit perkecil lagi */
+    }
+    .hero p {
+        font-size: 1.1rem; /* Sedikit perkecil lagi */
+    }
+
+    /* Homepage description section - tetap tumpuk animasi dan kartu utama */
+    .description-section:not(.geography-page) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Sedikit perkecil gap */
+    }
+    .description-section:not(.geography-page) .description-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .description-section:not(.geography-page) .description-card {
+        width: 100%;
+        max-width: 550px; /* Batasi lebar kartu di homepage pada tablet */
+        flex-basis: auto;
+        padding: 30px;
+    }
+    .accident-animation { /* Pastikan animasi tetap tampil di homepage */
+        width: 220px; /* Sedikit perkecil */
+        height: 220px; /* Sedikit perkecil */
+    }
+
+    /* Halaman Geografis - Tetap per baris melebar */
+    .geography-page .description-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 750px; /* Lebar maksimal di tablet */
+    }
+    .geography-page .description-card {
+        width: 90%; /* Mengatur lebar kartu geografis menjadi 90% pada tablet */
+        max-width: 700px; /* Batasi lebar kartu geografis pada tablet */
+        padding: 30px;
+    }
+    .description-card h3 {
+        font-size: 1.8rem; /* Sedikit perkecil lagi */
+        margin-bottom: 20px;
+    }
+    .description-text p {
+        font-size: 0.95rem; /* Sedikit perkecil lagi */
+    }
+    .description-text h4 {
+        font-size: 1rem; /* Sedikit perkecil lagi */
+    }
+    .description-text p.summary-conclusion {
+        font-size: 0.9rem; /* Sedikit perkecil lagi */
+    }
+
+
+    .gallery-card {
+        width: 48%; /* Two cards per row on tablets */
+        max-width: none;
+    }
+    .gallery-card .card-content h4 {
+        font-size: 1.2rem; /* Sedikit perkecil lagi */
+    }
+    .gallery-card .card-content p {
+        font-size: 0.9rem; /* Sedikit perkecil lagi */
+    }
+
+    .developer-info {
+        flex-direction: column; /* Stack developer cards and methodology */
+        align-items: center;
+        gap: 20px;
+    }
+    .developer-card,
+    .methodology {
+        max-width: 550px; /* Wider cards on tablets */
+        width: 100%;
+        padding: 22px;
+    }
+    .developer-card h4,
+    .methodology h4 {
+        font-size: 1.15rem; /* Sedikit perkecil lagi */
+    }
+    .developer-card p,
+    .methodology li {
+        font-size: 0.85rem; /* Sedikit perkecil lagi */
+    }
+    .tech-stack h5 {
+        font-size: 0.95rem; /* Sedikit perkecil lagi */
+    }
+    .tech-stack p {
+        font-size: 0.85rem; /* Sedikit perkecil lagi */
+    }
+    .disclaimer h4 {
+        font-size: 1.1rem; /* Sedikit perkecil lagi */
+    }
+    .disclaimer p {
+        font-size: 0.85rem; /* Sedikit perkecil lagi */
+    }
+
+    .map-container h3 {
+        font-size: 1.6rem; /* Sedikit perkecil lagi */
+    }
+    #mapid {
+        height: 500px;
+    }
+    .controls label {
+        font-size: 0.9rem; /* Sedikit perkecil lagi */
+    }
+    .controls select {
+        font-size: 0.85rem; /* Sedikit perkecil lagi */
+        padding: 6px 8px;
+    }
+    .legend-control a {
+        font-size: 12px; /* Sedikit perkecil lagi */
+        padding: 0 6px;
+        line-height: 22px;
+    }
+    #legend-container {
+        font-size: 0.8rem; /* Sedikit perkecil lagi */
+        min-width: 240px;
+    }
+    #legend-container strong {
+        font-size: 1rem;
+    }
+    .legend-item {
+        font-size: 0.85em;
+    }
+    #legend-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .data-section {
+        padding: 30px;
+        max-width: 900px;
+    }
+    .data-section h3 {
+        font-size: 1.5rem;
+    }
+    .data-statistics h4 {
+        font-size: 1.1rem;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+    .data-table th {
+        font-size: 0.75em;
+    }
+
+    .back-to-home a {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem;
+    }
+    .footer-section p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Small phones (less than 768px) */
+@media (max-width: 767px) {
+    header {
+        padding: 12px 10px;
+    }
+    header .logo {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        padding: 8px 10px;
+        gap: 5px;
+    }
+    .navbar a {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+    .hero-content {
+        padding: 30px 15px;
+    }
+    .hero h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .description-section {
+        padding: 40px 15px;
+    }
+    .description-card {
+        padding: 25px;
+    }
+    .description-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    .description-text {
+        padding: 15px;
+    }
+    .description-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .description-text h4 {
+        font-size: 0.95rem;
+    }
+    .description-text p.summary-conclusion {
+        font-size: 0.85rem;
+    }
+
+    /* Halaman Geografis */
+    .geography-page .description-card {
+        width: 95%; /* Lebih lebar lagi di ponsel */
+        max-width: 500px; /* Batasi untuk ponsel yang sangat lebar */
+        padding: 25px;
+    }
+
+    .page-header {
+        padding: 20px 15px;
+    }
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-gallery {
+        padding: 30px 15px;
+    }
+    .section-gallery h3 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    .gallery-cards {
+        gap: 15px;
+    }
+    .gallery-card {
+        width: 100%; /* Single card per row on small phones */
+        max-width: 350px; /* Optional: max width for single card */
+        margin: 0 auto; /* Center single card */
+    }
+    .gallery-card img {
+        height: 140px;
+    }
+    .gallery-card .card-content {
+        padding: 15px;
+    }
+    .gallery-card .card-content h4 {
+        font-size: 1.1rem;
+    }
+    .gallery-card .card-content p {
+        font-size: 0.85rem;
+    }
+
+    .developer-section {
+        padding: 30px 15px;
+    }
+    .developer-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .developer-info {
+        gap: 15px;
+    }
+    .developer-card,
+    .methodology {
+        padding: 20px;
+    }
+    .developer-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    .developer-card h4,
+    .methodology h4 {
+        font-size: 1.1rem;
+    }
+    .developer-card p,
+    .methodology li {
+        font-size: 0.8rem;
+    }
+    .tech-stack h5 {
+        font-size: 0.9rem;
+    }
+    .tech-stack p {
+        font-size: 0.8rem;
+    }
+    .disclaimer h4 {
+        font-size: 1rem;
+    }
+    .disclaimer p {
+        font-size: 0.8rem;
+    }
+
+    .map-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    .map-container h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    #mapid {
+        height: 400px;
+        border-width: 1px;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    .controls label {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.85rem;
+    }
+    .controls select {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    .leaflet-control-container .leaflet-right {
+        right: 5px; /* Sesuaikan posisi kontrol Leaflet */
+    }
+    .leaflet-control-container .leaflet-bottom {
+        bottom: 5px; /* Sesuaikan posisi kontrol Leaflet */
+    }
+    #legend-container {
+        top: 50px; /* Sesuaikan posisi agar tidak terlalu tinggi */
+        right: 5px; /* Lebih ke kanan */
+        padding: 10px;
+        min-width: 200px;
+        max-width: 95%; /* Bisa lebih lebar di ponsel */
+        font-size: 0.8rem;
+    }
+    #legend-container strong {
+        font-size: 0.95rem;
+    }
+    .legend-item {
+        font-size: 0.8em;
+        margin-bottom: 4px;
+    }
+    .legend-item i {
+        width: 20px;
+    }
+    #legend-content h4 {
+        font-size: 0.85rem;
+    }
+
+    .data-section {
+        padding: 20px;
+        margin: 15px auto;
+    }
+    .data-section h3 {
+        font-size: 1.3rem;
+    }
+    .data-statistics h4 {
+        font-size: 1rem;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 6px 8px;
+        font-size: 0.8em;
+    }
+    .data-table th {
+        font-size: 0.7em;
+    }
+
+    .back-to-home {
+        margin: 20px 0;
+    }
+    .back-to-home a {
+        padding: 7px 14px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+    }
+    .footer-section h4 {
+        font-size: 0.9rem;
+    }
+    .footer-section p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Extra small devices (less than 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+    .navbar a {
+        font-size: 0.8rem; /* Further adjustment for very small screens */
+        padding: 4px 8px;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    /* Homepage description section */
+    .description-section:not(.geography-page) .description-card {
+        max-width: 300px; /* Batasi lebar kartu di homepage pada mobile kecil */
+    }
+    /* Halaman Geografis - Tetap per baris melebar */
+    .geography-page .description-card {
+        max-width: 300px; /* Batasi lebar kartu geografis pada mobile kecil */
+    }
+    .description-card h3 {
+        font-size: 1.5rem;
+    }
+    .description-text p {
+        font-size: 0.85rem;
+    }
+    .gallery-card {
+        padding: 10px; /* Sesuaikan padding kartu galeri */
+    }
+    .gallery-card .card-content h4 {
+        font-size: 1rem;
+    }
+    .gallery-card .card-content p {
+        font-size: 0.8rem;
+    }
+
+    .developer-card,
+    .methodology {
+        padding: 15px;
+    }
+    .developer-card h4,
+    .methodology h4 {
+        font-size: 1rem;
+    }
+    .developer-card p,
+    .methodology li {
+        font-size: 0.75rem;
+    }
+    .map-container h3 {
+        font-size: 1.2rem;
+    }
+    #mapid {
+        height: 300px;
+    }
+    .controls label {
+        font-size: 0.8rem;
+    }
+    .controls select {
+        font-size: 0.75rem;
+    }
+    #legend-container {
+        font-size: 0.75rem;
+        min-width: 180px;
+        right: 2px;
+    }
+    .data-table th,
+    .data-table td {
+        font-size: 0.75em; /* perkecil font tabel untuk sangat kecil */
+        padding: 5px;
+    }
+    .data-table th {
+        font-size: 0.65em;
+    }
+}

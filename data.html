@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Kecelakaan - WEBGIS Titik Rawan Kecelakaan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="asset/Kabupaten Bandung.png" alt="Logo Kabupaten Bandung" class="logo">
+      <h1>WEBGIS Titik Rawan Kecelakaan di Kabupaten Bandung</h1>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Beranda</a>
+    <a href="peta.html">Peta</a>
+    <a href="data.html" class="active">Data</a>
+    <a href="ketiga.html">Pengembang</a> <a href="#contact">Kontak</a>
+  </nav>
+
+  <section class="page-header">
+    <h2>Data Tersedia</h2>
+  </section>
+
+  <section id="data" class="data-section">
+    <p>Data yang ditampilkan dari pencatatan kejadian kecelakaan di titik-titik strategis Kabupaten Bandung, 
+      meliputi 10 kecamatan dengan tingkat kecelakaan tertinggi berada di Kecamatan Kertasari, Banjaran, dan Nagreg.
+      Informasi ini mencakup nama jalan, penyebab utama kecelakaan, bobot penyebab, dan tingkat bahaya berdasarkan bobot.</p>
+    
+    <div class="data-statistics">
+      <h4>Statistik Kecelakaan Per-Kecamatan Tahun 2021 - 2024</h4>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Kecamatan</th>
+            <th>Nama Jalan</th>
+            <th>Penyebab Utama</th>
+            <th>Bobot Penyebab Utama</th>
+            <th>Tingkat Bahaya Berdasarkan Bobot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Rancabali</td><td>Jl. Raya Ciwidey - Rancabali</td><td>Cuaca berkabut & jalan menurun</td><td>2</td><td>Rendah</td></tr>
+          <tr><td>Cangkuang</td><td>Jl. Raya Soreang - Banjaran</td><td>Persimpangan ramai & jalan sempit</td><td>3</td><td>Sedang</td></tr>
+          <tr><td>Nagreg</td><td>Jl. Raya Cicalengka - Nagreg</td><td>Lalu lintas padat</td><td>3</td><td>Sedang</td></tr>
+          <tr><td>Bojongsoang</td><td>Jl. Raya Bojongsoang</td><td>Jalur alternatif padat & jalan sempit</td><td>3</td><td>Sedang</td></tr>
+          
+          <tr><td>Baleendah</td><td>Jl. Raya Baleendah - Arjasari</td><td>Jalan rusak</td><td>3</td><td>Tinggi</td></tr>
+          <tr><td>Ibun</td><td>Jl. Raya Majalaya - Ibun</td><td>Jalur industri padat & banyak truk</td><td>4</td><td>Tinggi</td></tr>
+          <tr><td>Cileunyi</td><td>Jl. Raya Cileunyi - Cikancung</td><td>Persimpangan ramai & kecepatan tinggi</td><td>4</td><td>Tinggi</td></tr>
+          <tr><td>Dayeuhkolot</td><td>Jl. Raya Dayeuhkolot - Baleendah</td><td>Lalu lintas padat & daerah rawan banjir</td><td>4</td><td>Tinggi</td></tr>
+
+          <tr><td>Banjaran</td><td>Jl. Raya Banjaran - Pangalengan</td><td>Tanjakan curam & tikungan tajam</td><td>5</td><td>Sangat Tinggi</td></tr>
+          <tr><td>Nagreg</td><td>Jl. Raya Nagreg - Limbangan</td><td>Tanjakan dan turunan curam</td><td>5</td><td>Sangat Tinggi</td></tr>
+          <tr><td>Kertasari</td><td>Jl. Raya Ciparay - Kertasari</td><td>Jalan pegunungan & tikungan tajam</td><td>5</td><td>Sangat Tinggi</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="back-to-home">
+    <a href="index.html">Kembali ke Beranda</a>
+  </div>
+
+   <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Kontak Resmi</h4>
+        <p>Geo-Trace Kabupaten Bandung</p>
+        <p>Email: geotrace@gmail.com</p>
+        <p>Telp: 086795236877</p>
+      </div>
+      <div class="footer-section">
+        <h4>GEO-TRACE</h4>
+        <p>Geographic Traffic Accident Comprehensive Evaluation</p>
+        <p>Titik Rawan Kecelakaan</p>
+        <p>Kabupaten Bandung</p>
+      </div>
+      <div class="footer-section">
+        <h4>Tahun 2025</h4>
+        <p>© Pengembang GEO-TRACE</p>
+        <p>Semua hak cipta dilindungi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
